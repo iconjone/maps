@@ -13,7 +13,7 @@
   "url": "maps/Capture.jpg",
   "size": "774 KB",
   "projection": ["EPSG:26918","+proj=utm +zone=18 +ellps=GRS80 +datum=NAD83 +units=m +no_defs"],
-  "extent": [-97.736545,30.532153,-97.720787,30.544055]
+  "extent": [-97.736545, 30.532153, -97.720787, 30.544055]
 }, {
   "name": "Capture",
   "description": "Thacher State Park is situated along the Helderberg Escarpment, one of the richest fossil-bearing formations in the world.",
@@ -21,7 +21,7 @@
   "url": "maps/Capture.jpg",
   "size": "780 KB",
   "projection": ["EPSG:26918","+proj=utm +zone=18 +ellps=GRS80 +datum=NAD83 +units=m +no_defs"],
-  "extent": [-97.736545,30.532153,-97.720787,30.544055]
+  "extent": [-97.736545, 30.532153, -97.720787, 30.544055]
 }, {
   "name": "Lisha Kill Natural Area",
   "description": "A visit to Lisha Kill offers a rare example of an old growth forest in a developed area. Some of the trees, namely the Eastern white pine and Eastern hemlock, are estimated to be well over 200 years old. There are flowing streams at this site, which have deep ravines through the underlying bedrock.",
