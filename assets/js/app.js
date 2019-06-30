@@ -418,6 +418,8 @@ app.functions = {
       });
 
       app.map.getView().on("change:rotation", function(evt) {
+          var heading = app.geolocation.getHeading() || 0;
+        alert(heading)
         var radians = evt.target.getRotation();
         var degrees = radians * 180 / Math.PI;
         $$("#rotate-icon").css("transform", "translate(-12px, -12px) rotate("+degrees+"deg)");
@@ -651,6 +653,25 @@ app.geolocation.on("change:position", function() {
   var speed = app.geolocation.getSpeed() || 0;
   app.layers.position.setGeometry(coordinates ? new ol.geom.Point(coordinates) : null);
 });
+
+
+
+app.geolocation.on("change:heading", onChangeHeading)
+
+
+function onChangeHeading(event) {
+  alert('ran')
+alert(event.target.getHeading());
+
+  // var radians = heading
+  // var degrees = radians * 180 / Math.PI;
+  // $$("#rotate-icon").css("transform", "translate(-12px, -12px) rotate("+degrees+"deg)");
+  // if (radians == 0) {
+  //   $$("#rotate-btn").css("display", "none");
+  // } else {
+  //   $$("#rotate-btn").css("display", "block");
+  // }
+}
 
 $$("input[type=radio][name=basemap]").change(function() {
   var settings = JSON.parse(sessionStorage.getItem("settings"));
