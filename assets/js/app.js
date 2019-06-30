@@ -418,8 +418,6 @@ app.functions = {
       });
 
       app.map.getView().on("change:rotation", function(evt) {
-          var heading = app.geolocation.getHeading() || 0;
-        alert(heading)
         var radians = evt.target.getRotation();
         var degrees = radians * 180 / Math.PI;
         $$("#rotate-icon").css("transform", "translate(-12px, -12px) rotate("+degrees+"deg)");
@@ -650,18 +648,19 @@ app.geolocation.on("change:position", function() {
   $$("#gps-icon").html("gps_fixed");
   var coordinates = app.geolocation.getPosition();
   var heading = app.geolocation.getHeading() || 0;
+  //alert(heading)
   var speed = app.geolocation.getSpeed() || 0;
   app.layers.position.setGeometry(coordinates ? new ol.geom.Point(coordinates) : null);
 });
 
+//rotating
 
-
-app.geolocation.on("change:heading", onChangeHeading)
-
-
-function onChangeHeading(event) {
-  alert('ran')
-alert(event.target.getHeading());
+// app.geolocation.on("change:heading", onChangeHeading)
+//
+//
+// function onChangeHeading(event) {
+//   alert('ran')
+// alert(event.target.getHeading());
 
   // var radians = heading
   // var degrees = radians * 180 / Math.PI;
@@ -671,7 +670,7 @@ alert(event.target.getHeading());
   // } else {
   //   $$("#rotate-btn").css("display", "block");
   // }
-}
+// }
 
 $$("input[type=radio][name=basemap]").change(function() {
   var settings = JSON.parse(sessionStorage.getItem("settings"));
