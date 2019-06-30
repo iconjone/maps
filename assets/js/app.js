@@ -46,7 +46,7 @@ app = new Framework7({
           $$("#gps-btn").removeClass("disabled");
           app.geolocation.setTracking(true);
           if (app.activeLayer) {
-            app.functions.setMap(app.activeLayer.toString());  
+            app.functions.setMap(app.activeLayer.toString());
           }
         }
       }
@@ -328,8 +328,8 @@ app.functions = {
                 localStorage.setItem("dismissPrompt", true);
               }
             }
-          }).open(); 
-        } 
+          }).open();
+        }
       }
     }
   },
@@ -517,7 +517,7 @@ app.functions = {
     if (navigator.onLine) {
       app.dialog.confirm("Save <b>" + config.name + "</b> map to your device?", null, function() {
         app.dialog.progress("Downloading map...");
-  
+
         app.request({
           url: config.url,
           method: "GET",
@@ -639,7 +639,7 @@ app.map.on("moveend", function(evt) {
 });
 
 app.geolocation.on("error", function(error) {
-  app.dialog.alert(error.message, "Geolocation error");
+  app.dialog.alert(error.message, "Geolocation error2");
   $$("#gps-icon").html("gps_not_fixed");
   $$("#gps-btn").addClass("disabled");
 });
